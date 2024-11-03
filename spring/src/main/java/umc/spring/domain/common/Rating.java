@@ -24,9 +24,6 @@ public class Rating extends BaseEntity {
     @Column(length = 200)
     private String ratingContent;
 
-    @Lob
-    private byte[] ratingImg;
-
     @ManyToOne(fetch = FetchType.LAZY)
     private Mission mission;
 

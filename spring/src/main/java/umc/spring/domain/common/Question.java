@@ -20,6 +20,7 @@ public class Question extends BaseEntity {
 
     private QuestionState state;
 
+    @Column(length = 200)
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
