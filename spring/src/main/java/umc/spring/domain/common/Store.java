@@ -28,7 +28,7 @@ public class Store {
     private List<Question> questionList = new ArrayList<>();
 
     @Column(name = "avg_rating")
-    private Integer avgRating;
+    private Float avgRating;
 
     @Column(length = 10)
     private String storeType;
@@ -37,4 +37,12 @@ public class Store {
     private String operationState;
 
     private LocalTime operationTime;
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "id=" + id +
+                ", name='" + storeName + '\'' +
+                ", score=" + avgRating;
+    }
 }
